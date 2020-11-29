@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Portfolio.css'
 import Toolbar from './Toolbar';
 import ProjectList from './ProjectList';
 import { projects } from './projects';
@@ -11,7 +10,7 @@ export default function Portfolio() {
     let [state, setFilter] = useState('All');
     //здесть происходит магия, не понимаю как работает setFilter
     const onSelectFilter = (filter) => {
-        setFilter(state => state = filter);  
+        setFilter(state => filter);  //стрелочная функция сразу возвращает значение в переменную state
     }
     
     
